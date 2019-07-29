@@ -9,13 +9,23 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+import { SocketIoModule, SocketIoConfig } from 'ngx-socket-io';
+import {HomePageModule} from './home/home.module';
+import {ChatPageModule} from './chat/chat.module';
+import {ChatPage} from './chat/chat.page';
+import {HomePage} from './home/home.page';
+import {ChatServiceService} from './chat-service.service';
+
+const config: SocketIoConfig = { url: 'http:/localhost:process.env.PORT', options: {} };
+
 @NgModule({
   declarations: [AppComponent],
-  entryComponents: [],
-  imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule],
+  entryComponents: [ChatPage, HomePage],
+  imports: [BrowserModule, IonicModule.forRoot(), SocketIoModule.forRoot(config), AppRoutingModule, HomePageModule, ChatPageModule],
   providers: [
     StatusBar,
     SplashScreen,
+      ChatServiceService,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]

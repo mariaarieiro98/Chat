@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {ModalController, NavController} from "@ionic/angular";
+import { ChatPage } from "../chat/chat.page";
 
 @Component({
   selector: 'app-home',
@@ -7,6 +9,18 @@ import { Component } from '@angular/core';
 })
 export class HomePage {
 
-  constructor() {}
+  public user: string;
 
+  constructor(
+      public navController: NavController,
+      private modalCtrl: ModalController
+  ) { }
+
+  async openChat() {
+    const modal = await this.modalCtrl.create({
+        component: ChatPage,
+        componentProps: {user: this.user}
+    });
+    await modal.present();
+  }
 }
