@@ -16,7 +16,7 @@ import {ChatPage} from './chat/chat.page';
 import {HomePage} from './home/home.page';
 import {ChatServiceService} from './chat-service.service';
 
-const config: SocketIoConfig = { url: 'https://mariaarieiro98-socket-server.glitch.me', options: {} };
+const config: SocketIoConfig = { url: 'https://localhost:process.env.PORT', options: {} };
 
 @NgModule({
   declarations: [AppComponent],
