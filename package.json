@@ -31,16 +31,23 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^4.1.0",
     "@ionic/ng-toolkit": "^1.0.8",
+    "body-parser": "^1.19.0",
     "cordova-android": "8.0.0",
     "cordova-plugin-network-information": "^2.0.2",
     "core-js": "^2.5.4",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "morgan": "^1.9.1",
     "ng-socket-io": "^0.2.4",
     "ngx-socket-io": "^2.1.1",
     "rxjs": "~6.5.1",
     "rxjs-compat": "^6.5.2",
+    "socket-io": "^1.0.0",
     "socket.io": "^2.2.0",
     "tslib": "^1.9.0",
-    "zone.js": "~0.8.29"
+    "zone.js": "~0.8.29",
+    "typescript": "~3.1.6",
+    "@ionic/app-scripts": "^3.2.4"
   },
   "devDependencies": {
     "@angular-devkit/architect": "~0.13.8",
@@ -72,8 +79,7 @@
     "node-sass": "^4.12.0",
     "protractor": "~5.4.0",
     "ts-node": "~8.3.0",
-    "tslint": "~5.17.0",
-    "typescript": "~3.1.6"
+    "tslint": "~5.17.0"
   },
   "description": "An Ionic project",
   "cordova": {
