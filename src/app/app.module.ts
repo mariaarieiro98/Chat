@@ -16,7 +16,13 @@ import {ChatPage} from './chat/chat.page';
 import {HomePage} from './home/home.page';
 import {ChatServiceService} from './chat-service.service';
 
-const config: SocketIoConfig = { url: 'https://localhost:process.env.PORT', options: {} };
+const connOptions = {
+  'force new connection' : true,
+  reconnectionAttempts : 'Infinity',
+  timeout : 10000,
+  transports : ['websocket']
+};
+const config: SocketIoConfig = { url: 'ws://jetclass.inegi.up.pt/socket.io/socket.io.js:80', options: connOptions };
 
 @NgModule({
   declarations: [AppComponent],

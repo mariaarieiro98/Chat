@@ -7,6 +7,6 @@
     </base-config>
     <domain-config cleartextTrafficPermitted="true">
         <domain>localhost</domain>
-        <domain includeSubdomains="true">DESKTOP-4HR657D.local:8000</domain>
+        <domain includeSubdomains="true">jetclass.inegi.up.pt:80</domain>
     </domain-config>
 </network-security-config>

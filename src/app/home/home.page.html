@@ -1,15 +1,16 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>
-      Ionic Chat
+    <ion-title class="one">
+      My Ionic Chat
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content padding>
   <ion-item no-lines>
-    <ion-input type="text" placeholder="Digite aqui o seu usuário" [(ngModel)]="user"></ion-input>
+    <ion-input type="text" placeholder="Digite o seu nome..." [(ngModel)]="user"></ion-input>
   </ion-item>
 
   <ion-button block [disabled]="!user || !user.length" (click)="openChat()">Acessar Chat</ion-button>
+
 </ion-content>

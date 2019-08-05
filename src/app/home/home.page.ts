@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import {ModalController, NavController} from "@ionic/angular";
-import { ChatPage } from "../chat/chat.page";
+import {ModalController, NavController} from '@ionic/angular';
+import { ChatPage } from '../chat/chat.page';
 
 @Component({
   selector: 'app-home',
@@ -12,7 +12,6 @@ export class HomePage {
   public user: string;
 
   constructor(
-      public navController: NavController,
       private modalCtrl: ModalController
   ) { }
 
